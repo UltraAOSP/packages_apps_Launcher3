@@ -16,6 +16,12 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <SwitchPreference
+        android:title="@string/title_show_google_app"
+        android:key="pref_enable_minus_one"
+        android:summary="@string/pref_show_google_now_summary"
+        android:defaultValue="true"/>
+
     <com.android.launcher3.views.ButtonPreference
         android:key="pref_icon_badging"
         android:title="@string/icon_badging_title"
@@ -43,13 +49,6 @@
         android:defaultValue="@bool/allow_rotation"
         android:persistent="true" />
 
-    <SwitchPreference
-        android:key="pref_allowSwipeDownClearAll"
-        android:title="@string/allow_swipe_down_clearall_title"
-        android:summary="@string/allow_swipe_down_clearall_desc"
-        android:defaultValue="@bool/allow_swipe_down_clearall"
-        android:persistent="true" />
-
     <ListPreference
         android:key="pref_override_icon_shape"
         android:title="@string/icon_shape_override_label"
@@ -58,13 +57,5 @@
         android:entryValues="@array/icon_shape_override_paths_values"
         android:defaultValue=""
         android:persistent="false" />
-
-    <ListPreference
-        android:key="pref_theme_style"
-        android:title="@string/theme_style_title"
-        android:persistent="true"
-        android:entries="@array/theme_style_entries"
-        android:entryValues="@array/theme_style_values"
-        android:defaultValue="0" />
 
 </PreferenceScreen>
